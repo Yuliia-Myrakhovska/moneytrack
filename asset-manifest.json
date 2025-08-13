@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/moneytrack/static/css/main.a1824504.css",
+    "main.js": "/moneytrack/static/js/main.461829ab.js",
+    "static/js/453.38071da9.chunk.js": "/moneytrack/static/js/453.38071da9.chunk.js",
+    "index.html": "/moneytrack/index.html",
+    "static/media/edit.svg": "/moneytrack/static/media/edit.741bab24dc326321098c00dac2fb3e90.svg",
+    "static/media/clothes.svg": "/moneytrack/static/media/clothes.911d33f09cdadc4c80fbb65566fc52e2.svg",
+    "static/media/other.svg": "/moneytrack/static/media/other.2e990dfa7434f0ff497280646b93ee04.svg",
+    "static/media/phone.svg": "/moneytrack/static/media/phone.d7359e1a961464315ba24a3bdb812cea.svg",
+    "static/media/products.svg": "/moneytrack/static/media/products.2b77f8485bc03d72bdeea63dc9d0c87f.svg",
+    "static/media/rent.svg": "/moneytrack/static/media/rent.168fce054b6a2606d74801ac2a75d7a8.svg",
+    "static/media/delete.svg": "/moneytrack/static/media/delete.6d5bd4fce77d9ec3b067e1ffacb774db.svg",
+    "static/media/lists.svg": "/moneytrack/static/media/lists.46d3e0d737c19ceb28db0d929766d0f9.svg",
+    "static/media/sort.svg": "/moneytrack/static/media/sort.f12a825d3112f1663a096c0acc3a7aaa.svg",
+    "static/media/internet.svg": "/moneytrack/static/media/internet.17d057f6a6987acefb1aa083f4999666.svg",
+    "static/media/close.svg": "/moneytrack/static/media/close.be0bf4f8e9bdf5aa8948bd6c8134bce8.svg",
+    "static/media/diagram.svg": "/moneytrack/static/media/diagram.bcc5000056912343b0152e05c740dc1a.svg",
+    "static/media/add.svg": "/moneytrack/static/media/add.8fe5c80210a0bdf9555db964d9eef5b2.svg",
+    "main.a1824504.css.map": "/moneytrack/static/css/main.a1824504.css.map",
+    "main.461829ab.js.map": "/moneytrack/static/js/main.461829ab.js.map",
+    "453.38071da9.chunk.js.map": "/moneytrack/static/js/453.38071da9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1824504.css",
+    "static/js/main.461829ab.js"
+  ]
+}
