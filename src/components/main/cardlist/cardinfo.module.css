@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #728156, #88976c, #98a77c, #b6c99b);
+  display: flex;
+  gap: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #e7f5dc;
+}
+
+.info {
+  width: 80%;
+  border-left: 1px solid #e7f5dc;
+  border-right: 1px solid #e7f5dc;
+
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.cat {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 40px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.category {
+  font-size: 26px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+}
+
+.hryvnia {
+  width: 40px;
+}
+
+.date {
+  font-style: italic;
+}
+
+.amount {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.icon {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.edit,
+.delete {
+  width: 40px;
+  transition: 0.5s;
+}
+
+.edit:hover,
+.delete:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .edit,
+  .delete {
+    width: 30px;
+  }
+
+  .hryvnia {
+    width: 30px;
+  }
+}
