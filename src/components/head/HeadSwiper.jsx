@@ -26,6 +26,7 @@ function HeadSwiper({
         const sumYear = await getSumCurrentYear();
         sums.push(sumYear);
       }
+      console.log(sums);
       setSumList(sums);
     }
     fetchSums();

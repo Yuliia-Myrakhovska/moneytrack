@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import sort from "../../../img/sort.svg";
 import add from "../../../img/add.svg";
-import lists from "../../../img/lists.svg";
-import diagram from "../../../img/diagram.svg";
 import style from "./menubar.module.css";
 import ModalCrete from "../../modal/modalcreate/ModalCreate";
 
-function MenuBar({ addTransaction, fileToDataUrl }) {
+function MenuBar({ addTransaction }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const category = [
@@ -60,11 +58,6 @@ function MenuBar({ addTransaction, fileToDataUrl }) {
         </div>
         <div className={style.sort}>
           <img src={sort} alt="sort" />
-        </div>
-        <div className={style.view}>
-          <img className={style.lists} src={lists} alt="" />
-          <div className={style.border}></div>
-          <img className={style.diagram} src={diagram} alt="" />
         </div>
         <div className={style.add}>
           <img src={add} alt="add" onClick={() => setIsModalOpen(true)} />

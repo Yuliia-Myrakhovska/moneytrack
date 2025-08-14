@@ -64,17 +64,14 @@ export async function getByCategory(category) {
   return db.transactions.where("category").equals(category).reverse().toArray();
 }
 
-// получить транзакции в диапазоне дат (date в формате YYYY-MM-DD)
 export async function getByDateRange(startDate, endDate) {
-  // предполагаем строки ISO (YYYY-MM-DD) — сравниваются лексикографически корректно
   return db.transactions
     .where("date")
-    .between(startDate, endDate, true, true)
+    .between(startDate, endDate, false, true)
     .reverse()
     .toArray();
 }
 
-// сумма по категориям (или общая) — возвращает объект { total, byCategory: {cat: sum} }
 export async function getSummary(startDate, endDate) {
   const items =
     startDate && endDate
@@ -101,54 +98,56 @@ export async function getSummary(startDate, endDate) {
 //   });
 // }
 
-// Помощник: форматирует дату в YYYY-MM-DD
 function formatDate(date) {
   return date.toISOString().slice(0, 10);
 }
 
-// Сумма транзакций за текущий месяц
 export async function getSumCurrentMonth() {
   const now = new Date();
+
   const start = new Date(now.getFullYear(), now.getMonth(), 1);
-  const end = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+  const end = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+
   const startStr = formatDate(start);
   const endStr = formatDate(end);
+
   const items = await db.transactions
     .where("date")
-    .between(startStr, endStr, true, true)
+    .between(startStr, endStr, false, true)
     .toArray();
 
-  return items.reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  const sum = items.reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  return Number(sum.toFixed(2));
 }
 
-// Сумма транзакций за последние 6 месяцев (включая текущий)
 export async function getSumLast6Months() {
   const now = new Date();
   const end = new Date(now.getFullYear(), now.getMonth() + 1, 0);
-  const start = new Date(now.getFullYear(), now.getMonth() - 5, 1); // минус 5 месяцев от текущего (всего 6 месяцев)
+  const start = new Date(now.getFullYear(), now.getMonth() - 5, 1);
   const startStr = formatDate(start);
   const endStr = formatDate(end);
   const items = await db.transactions
     .where("date")
-    .between(startStr, endStr, true, true)
+    .between(startStr, endStr, false, true)
     .toArray();
 
-  return items.reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  const sum = items.reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  return Number(sum.toFixed(2));
 }
 
-// Сумма транзакций за текущий год
 export async function getSumCurrentYear() {
   const now = new Date();
-  const start = new Date(now.getFullYear(), 0, 1); // 1 января текущего года
-  const end = new Date(now.getFullYear(), 11, 31); // 31 декабря текущего года
+  const start = new Date(now.getFullYear(), 0, 1);
+  const end = new Date(now.getFullYear(), 11, 31);
   const startStr = formatDate(start);
   const endStr = formatDate(end);
   const items = await db.transactions
     .where("date")
-    .between(startStr, endStr, true, true)
+    .between(startStr, endStr, false, true)
     .toArray();
 
-  return items.reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  const sum = items.reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  return Number(sum.toFixed(2));
 }
 
 export default db;

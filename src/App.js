@@ -8,22 +8,29 @@ import {
   getSumCurrentYear,
   deleteTransaction,
   addTransaction,
+  getSummary,
+  getByDateRange,
 } from "./db";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="container-app">
-      <HeadSwiper
-        getSumCurrentMonth={getSumCurrentMonth}
-        getSumLast6Months={getSumLast6Months}
-        getSumCurrentYear={getSumCurrentYear}
-      />
-      <Main
-        getAllTransactions={getAllTransactions}
-        deleteTransaction={deleteTransaction}
-        addTransaction={addTransaction}
-      />
-    </div>
+    <BrowserRouter>
+      <div className="container-app">
+        <HeadSwiper
+          getSumCurrentMonth={getSumCurrentMonth}
+          getSumLast6Months={getSumLast6Months}
+          getSumCurrentYear={getSumCurrentYear}
+        />
+        <Main
+          getAllTransactions={getAllTransactions}
+          deleteTransaction={deleteTransaction}
+          addTransaction={addTransaction}
+          getSummary={getSummary}
+          getByDateRange={getByDateRange}
+        />
+      </div>
+    </BrowserRouter>
   );
 }
 

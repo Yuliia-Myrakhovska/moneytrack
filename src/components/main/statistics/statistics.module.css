@@ -1,0 +1,35 @@
+.statistics {
+  margin-top: 10px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #051f20;
+}
+
+.month {
+  margin: 10px 0 15px 0;
+  font-size: 20px;
+  text-align: end;
+}
+
+.block {
+  display: flex;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.block:last-of-type {
+  margin: 0 0 15px 0;
+}
+
+.span {
+  width: 100%;
+  border-bottom: 3px dotted #051f20;
+  margin: 0 5px;
+}
+
+.money {
+  display: flex;
+  align-items: center;
+}

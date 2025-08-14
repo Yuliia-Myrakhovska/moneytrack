@@ -59,7 +59,6 @@ function ModalCreate({ isOpen, onCloseModal, addTransaction, onSaved }) {
             alt="close"
             onClick={() => {
               onCloseModal();
-              window.location.reload();
             }}
           />
         </div>

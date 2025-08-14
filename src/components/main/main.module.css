@@ -1,0 +1,23 @@
+.linkContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.link {
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: #b6c99b;
+  /* margin: 0 auto; */
+  box-sizing: border-box;
+  width: 50%;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #e7f5dc;
+  text-decoration: none;
+  text-align: center;
+}
