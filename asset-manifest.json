@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/moneytrack/static/css/main.c4ac3576.css",
-    "main.js": "/moneytrack/static/js/main.8913397b.js",
-    "static/js/453.38071da9.chunk.js": "/moneytrack/static/js/453.38071da9.chunk.js",
+    "main.css": "/moneytrack/static/css/main.61bc4a39.css",
+    "main.js": "/moneytrack/static/js/main.0653f6d1.js",
+    "static/js/453.e29db454.chunk.js": "/moneytrack/static/js/453.e29db454.chunk.js",
     "index.html": "/moneytrack/index.html",
-    "static/media/edit.svg": "/moneytrack/static/media/edit.741bab24dc326321098c00dac2fb3e90.svg",
-    "static/media/clothes.svg": "/moneytrack/static/media/clothes.911d33f09cdadc4c80fbb65566fc52e2.svg",
-    "static/media/other.svg": "/moneytrack/static/media/other.2e990dfa7434f0ff497280646b93ee04.svg",
-    "static/media/phone.svg": "/moneytrack/static/media/phone.d7359e1a961464315ba24a3bdb812cea.svg",
-    "static/media/products.svg": "/moneytrack/static/media/products.2b77f8485bc03d72bdeea63dc9d0c87f.svg",
-    "static/media/rent.svg": "/moneytrack/static/media/rent.168fce054b6a2606d74801ac2a75d7a8.svg",
-    "static/media/delete.svg": "/moneytrack/static/media/delete.6d5bd4fce77d9ec3b067e1ffacb774db.svg",
+    "static/media/clothes.svg": "/moneytrack/static/media/clothes.00b5b916809202145f30fb83ec7245ac.svg",
+    "static/media/other.svg": "/moneytrack/static/media/other.388282859cd7c0db33254e3a631f3d1b.svg",
+    "static/media/logo.svg": "/moneytrack/static/media/logo.ce9ea724003e8c5746269d7d0b4e79e3.svg",
+    "static/media/phone.svg": "/moneytrack/static/media/phone.dcd9509544c7d805b525251a9bcb87b6.svg",
+    "static/media/products.svg": "/moneytrack/static/media/products.535aac8bda643e7fa2fa996b63bdcaa8.svg",
+    "static/media/rent.svg": "/moneytrack/static/media/rent.75c50947c12f800ee45421a7f3940131.svg",
     "static/media/sort.svg": "/moneytrack/static/media/sort.f12a825d3112f1663a096c0acc3a7aaa.svg",
-    "static/media/internet.svg": "/moneytrack/static/media/internet.17d057f6a6987acefb1aa083f4999666.svg",
+    "static/media/finance.svg": "/moneytrack/static/media/finance.69418f81cddb3696abf6242d77a683a1.svg",
     "static/media/close.svg": "/moneytrack/static/media/close.be0bf4f8e9bdf5aa8948bd6c8134bce8.svg",
-    "static/media/add.svg": "/moneytrack/static/media/add.8fe5c80210a0bdf9555db964d9eef5b2.svg",
+    "static/media/internet.svg": "/moneytrack/static/media/internet.d6ab91644e33195a5893aa2fcd9a3e8b.svg",
+    "static/media/arrow_back.svg": "/moneytrack/static/media/arrow_back.db529038117db109b657c5a360a91e70.svg",
+    "static/media/add.svg": "/moneytrack/static/media/add.b2d358c7f07d00a2cd6a7a79db080f8f.svg",
     "static/media/arrow_down.svg": "/moneytrack/static/media/arrow_down.af8ffa07c82d763ca4a91397d4c109a9.svg",
-    "main.c4ac3576.css.map": "/moneytrack/static/css/main.c4ac3576.css.map",
-    "main.8913397b.js.map": "/moneytrack/static/js/main.8913397b.js.map",
-    "453.38071da9.chunk.js.map": "/moneytrack/static/js/453.38071da9.chunk.js.map"
+    "main.61bc4a39.css.map": "/moneytrack/static/css/main.61bc4a39.css.map",
+    "main.0653f6d1.js.map": "/moneytrack/static/js/main.0653f6d1.js.map",
+    "453.e29db454.chunk.js.map": "/moneytrack/static/js/453.e29db454.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4ac3576.css",
-    "static/js/main.8913397b.js"
+    "static/css/main.61bc4a39.css",
+    "static/js/main.0653f6d1.js"
   ]
 }
