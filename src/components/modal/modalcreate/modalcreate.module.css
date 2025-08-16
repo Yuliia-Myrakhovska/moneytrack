@@ -12,7 +12,7 @@
 }
 
 .container {
-  background: #daded8;
+  background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
   position: absolute;
@@ -73,19 +73,19 @@ img:hover {
 .cat {
   display: flex;
   align-items: center;
-  background-color: #051f20;
+  background-color: #728156;
   padding: 8px 10px;
   width: 130px;
   border-radius: 10px;
   justify-content: space-between;
-  color: #e7f5dc;
+  color: #f9f9f9;
   font-size: 20px;
 }
 
 .emty {
   height: 40px;
   font-size: 20px;
-  color: #051f20;
+  color: #728156;
   align-content: center;
 }
 
@@ -98,7 +98,7 @@ img:hover {
 
 .date {
   all: unset;
-  color: #051f20;
+  color: #728156;
 }
 
 .date:hover {
@@ -113,7 +113,7 @@ img:hover {
 .inputGroup input,
 .inputGroup textarea {
   all: unset;
-  border-bottom: 1px solid #b6c99b;
+  border-bottom: 1px solid #728156;
   margin-bottom: 15px;
 }
 
