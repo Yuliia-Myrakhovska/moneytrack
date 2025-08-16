@@ -56,9 +56,9 @@ function MenuBar({ addTransaction }) {
             ))}
           </select>
         </div>
-        <div className={style.sort}>
+        {/* <div className={style.sort}>
           <img src={sort} alt="sort" />
-        </div>
+        </div> */}
         <div className={style.add}>
           <img src={add} alt="add" onClick={() => setIsModalOpen(true)} />
         </div>

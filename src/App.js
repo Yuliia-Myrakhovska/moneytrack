@@ -1,6 +1,7 @@
 import "./App.css";
-import HeadSwiper from "./components/head/HeadSwiper";
 import Main from "./components/main/Main";
+import Nav from "./components/head/nav/Nav";
+import Statistics from "./components/main/statistics/Statistics";
 import {
   getAllTransactions,
   getSumCurrentMonth,
@@ -11,25 +12,35 @@ import {
   getSummary,
   getByDateRange,
 } from "./db";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="container-app">
-        <HeadSwiper
-          getSumCurrentMonth={getSumCurrentMonth}
-          getSumLast6Months={getSumLast6Months}
-          getSumCurrentYear={getSumCurrentYear}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Main
+              getAllTransactions={getAllTransactions}
+              deleteTransaction={deleteTransaction}
+              addTransaction={addTransaction}
+              getSumCurrentMonth={getSumCurrentMonth}
+              getSumLast6Months={getSumLast6Months}
+              getSumCurrentYear={getSumCurrentYear}
+            />
+          }
         />
-        <Main
-          getAllTransactions={getAllTransactions}
-          deleteTransaction={deleteTransaction}
-          addTransaction={addTransaction}
-          getSummary={getSummary}
-          getByDateRange={getByDateRange}
+        <Route
+          path="/statistics"
+          element={
+            <Statistics
+              getSummary={getSummary}
+              getByDateRange={getByDateRange}
+            />
+          }
         />
-      </div>
+      </Routes>
     </BrowserRouter>
   );
 }

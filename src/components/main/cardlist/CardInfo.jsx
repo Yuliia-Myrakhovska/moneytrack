@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import MenuBar from "../menubar/MenuBar";
 import style from "./cardinfo.module.css";
-import hryvnia from "../../../img/hryvnia.png";
-import imgedit from "../../../img/edit.svg";
-import imgdelete from "../../../img/delete.svg";
+import hryvnia from "../../../img/darkhryvnia.png";
+// import imgedit from "../../../img/edit.svg";
+// import imgdelete from "../../../img/delete.svg";
 import productsIcon from "../../../img/products.svg";
 import clothesIcon from "../../../img/clothes.svg";
 import phoneIcon from "../../../img/phone.svg";
@@ -50,61 +50,69 @@ function CardInfo({ getAllTransactions, deleteTransaction, addTransaction }) {
     .slice(0, visibleCount);
 
   return (
-    <div>
-      <MenuBar addTransaction={addTransaction} />
-      {transactions.length === 0 && <p>Транзакций нет</p>}
-      <ul className={style.container}>
-        {filteredTransactions.map(
-          ({ id, category, amount, date, description }) => (
-            <li key={id} className={style.card}>
-              <div className={style.cat}>
-                {categoryIcons[category] && (
-                  <img
-                    className={style.img}
-                    src={categoryIcons[category]}
-                    alt={category}
-                  />
-                )}
-              </div>
-              <div className={style.info}>
-                <div className={style.head}>
-                  <p className={style.category}>{category}</p>
-                  <p className={style.date}>{date}</p>
+    <div className={style.containerWrapper}>
+      <div className={style.containerInner}>
+        <MenuBar addTransaction={addTransaction} />
+        {transactions.length === 0 && <p>Транзакций нет</p>}
+        <ul className={style.container}>
+          {filteredTransactions.map(
+            ({ id, category, amount, date, description }) => (
+              <li key={id} className={style.card}>
+                <div className={style.cat}>
+                  {categoryIcons[category] && (
+                    <img
+                      className={style.img}
+                      src={categoryIcons[category]}
+                      alt={category}
+                    />
+                  )}
                 </div>
-                <div className={style.block}>
-                  <img className={style.hryvnia} src={hryvnia} alt="hryvnia" />
-                  <p className={style.amount}>{amount}</p>
-                </div>
+                <div className={style.info}>
+                  <div className={style.head}>
+                    <p className={style.category}>{category}</p>
+                    <p className={style.date}>{date}</p>
+                  </div>
 
-                <p className={style.date}>{description}</p>
-              </div>
-              <div className={style.icon}>
-                <img className={style.edit} src={imgedit} alt="edit" />
-                <img
-                  className={style.delete}
-                  src={imgdelete}
-                  alt="delete"
-                  onClick={() => {
-                    deleteTransaction(id);
-                    window.location.reload();
-                  }}
-                />
-              </div>
-            </li>
-          )
+                  <p className={style.date}>{description}</p>
+                </div>
+                <div>
+                  <div className={style.block}>
+                    <img
+                      className={style.hryvnia}
+                      src={hryvnia}
+                      alt="hryvnia"
+                    />
+                    <p className={style.amount}>{amount}</p>
+                  </div>
+                </div>
+                {/* <div className={style.icon}>
+                  <img className={style.edit} src={imgedit} alt="edit" />
+                  <img
+                    className={style.delete}
+                    src={imgdelete}
+                    alt="delete"
+                    onClick={() => {
+                      deleteTransaction(id);
+                      window.location.reload();
+                    }}
+                  />
+                </div> */}
+              </li>
+            )
+          )}
+        </ul>
+        {/* Кнопка показать больше / меньше */}
+        {transactions.length > filteredTransactions.length && (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img
+              className={style.down}
+              src={arrow_down}
+              alt="arrow_down"
+              onClick={() => setVisibleCount(visibleCount + 5)}
+            />
+          </div>
         )}
-      </ul>
-      {/* Кнопка показать больше / меньше */}
-      {transactions.length > filteredTransactions.length && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <img
-            className={style.down}
-            src={arrow_down}
-            alt="arrow_down"
-            onClick={() => setVisibleCount(visibleCount + 5)}
-          />
-        </div>
-      )}
+      </div>
     </div>
   );
 }

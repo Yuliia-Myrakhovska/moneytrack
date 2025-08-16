@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 15px 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: #f9f9f9;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #728156;
+  gap: 5px;
+}
+
+/* @media (min-width: 784px) {
+  .link:hover {
+    text-decoration: solid;
+    transition: 0.5s;
+  }
+} */
+
+.link,
+.logo {
+  text-decoration: none;
+}
+
+.logoImg {
+  width: 40px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 100%;
+}

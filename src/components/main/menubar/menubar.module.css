@@ -20,41 +20,42 @@
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #051f20;
-  background-color: #e7f5dc;
+  border: 1px solid #728156;
+  background-color: #f9f9f9;
+  color: #728156;
   font-size: 16px;
   outline: none;
   cursor: pointer;
 }
 
 .select::-webkit-dropdown-arrow {
-  color: #051f20;
+  color: #728156;
 }
 
 .select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #051f20;
+  text-shadow: 0 0 0 #728156;
 }
 
 .option {
-  background-color: #e7f5dc;
-  color: #051f20;
+  background-color: #f9f9f9;
+  color: #728156;
 }
 
 .option:hover {
-  background-color: #235347;
+  background-color: #728156;
 }
 
 .option:focus {
-  background-color: #235347;
+  background-color: #728156;
 }
 
 .sort,
 .add {
   width: 4%;
   height: 40px;
-  background-color: #e7f5dc;
-  border: 1px solid #051f20;
+  background-color: #f9f9f9;
+  border: 1px solid #728156;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -72,8 +73,8 @@
   height: 40px;
   display: flex;
   align-items: center;
-  background-color: #e7f5dc;
-  border: 1px solid #051f20;
+  background-color: #f9f9f9;
+  border: 1px solid #728156;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -83,7 +84,7 @@
 .border {
   height: 100%;
   width: 1px;
-  background: #051f20;
+  background: #728156;
 }
 
 .lists {
