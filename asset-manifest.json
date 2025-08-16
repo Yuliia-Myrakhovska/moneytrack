@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/moneytrack/static/css/main.44588823.css",
-    "main.js": "/moneytrack/static/js/main.0653f6d1.js",
+    "main.js": "/moneytrack/static/js/main.d2a83d0b.js",
     "static/js/453.e29db454.chunk.js": "/moneytrack/static/js/453.e29db454.chunk.js",
     "index.html": "/moneytrack/index.html",
     "static/media/clothes.svg": "/moneytrack/static/media/clothes.00b5b916809202145f30fb83ec7245ac.svg",
@@ -18,11 +18,11 @@
     "static/media/add.svg": "/moneytrack/static/media/add.b2d358c7f07d00a2cd6a7a79db080f8f.svg",
     "static/media/arrow_down.svg": "/moneytrack/static/media/arrow_down.af8ffa07c82d763ca4a91397d4c109a9.svg",
     "main.44588823.css.map": "/moneytrack/static/css/main.44588823.css.map",
-    "main.0653f6d1.js.map": "/moneytrack/static/js/main.0653f6d1.js.map",
+    "main.d2a83d0b.js.map": "/moneytrack/static/js/main.d2a83d0b.js.map",
     "453.e29db454.chunk.js.map": "/moneytrack/static/js/453.e29db454.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44588823.css",
-    "static/js/main.0653f6d1.js"
+    "static/js/main.d2a83d0b.js"
   ]
 }
