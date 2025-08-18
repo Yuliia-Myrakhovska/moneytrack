@@ -6,7 +6,7 @@ import Header from "../head/Header";
 function Main({
   getAllTransactions,
   deleteTransaction,
-  addTransaction,
+  onOpenModal,
   getSumCurrentMonth,
   getSumLast6Months,
   getSumCurrentYear,
@@ -26,7 +26,7 @@ function Main({
         <CardInfo
           getAllTransactions={getAllTransactions}
           deleteTransaction={deleteTransaction}
-          addTransaction={addTransaction}
+          onOpenModal={onOpenModal}
         />
       </main>
     </>

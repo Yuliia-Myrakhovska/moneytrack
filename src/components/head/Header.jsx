@@ -5,17 +5,19 @@ import style from "./header.module.css";
 
 function Header() {
   return (
-    <header className={style.container}>
-      <Link className={style.logo} to="/">
-        <img className={style.logoImg} src={logo} alt="logo" />
-        <h1>MoneyTrack</h1>
-      </Link>
-      <nav>
-        <Link to="/statistics" className={style.link}>
-          <Nav />
+    <div className={style.headerContainer}>
+      <header className={style.container}>
+        <Link className={style.logo} to="/">
+          <img className={style.logoImg} src={logo} alt="logo" />
+          <h1>MoneyTrack</h1>
         </Link>
-      </nav>
-    </header>
+        <nav>
+          <Link to="/statistics" className={style.link}>
+            <Nav />
+          </Link>
+        </nav>
+      </header>
+    </div>
   );
 }
 export default Header;

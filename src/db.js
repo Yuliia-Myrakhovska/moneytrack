@@ -6,9 +6,8 @@ db.version(1).stores({
   transactions: "++id, category, amount, description, date",
 });
 
-// helper: добавить транзакцию
 export async function addTransaction(tx) {
-  // ожидаем tx: { title, category, amount, description, date, photo }
+  // tx: { title, category, amount, description, date, photo }
   try {
     const id = await db.transactions.add(tx);
     return id;
@@ -18,7 +17,6 @@ export async function addTransaction(tx) {
   }
 }
 
-// получить все транзакции (опционально сортировка)
 export async function getAllTransactions(sort = "date", desc = true) {
   try {
     const collection = db.transactions.orderBy(sort);
@@ -31,12 +29,11 @@ export async function getAllTransactions(sort = "date", desc = true) {
   }
 }
 
-// получить транзакцию по id
+//  по id
 export async function getTransactionById(id) {
   return db.transactions.get(id);
 }
 
-// обновить транзакцию (передать объект с id)
 export async function updateTransaction(tx) {
   try {
     const id = tx.id;
@@ -49,7 +46,6 @@ export async function updateTransaction(tx) {
   }
 }
 
-// удалить транзакцию
 export async function deleteTransaction(id) {
   try {
     await db.transactions.delete(id);
@@ -59,7 +55,7 @@ export async function deleteTransaction(id) {
   }
 }
 
-// фильтровать по категории
+// по категории
 export async function getByCategory(category) {
   return db.transactions.where("category").equals(category).reverse().toArray();
 }

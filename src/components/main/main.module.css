@@ -33,3 +33,9 @@
   position: relative;
   z-index: 1;
 }
+
+@media (min-width: 784px) {
+  .container {
+    margin-top: 20px;
+  }
+}

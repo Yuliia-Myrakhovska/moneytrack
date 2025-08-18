@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import sort from "../../../img/sort.svg";
 import add from "../../../img/add.svg";
 import style from "./menubar.module.css";
 import ModalCrete from "../../modal/modalcreate/ModalCreate";
 
-function MenuBar({ addTransaction }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+function MenuBar({ onFilterChange, onOpenModal }) {
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedMonth, setSelectedMonth] = useState("");
 
   const category = [
     "Продукти",
@@ -29,14 +29,27 @@ function MenuBar({ addTransaction }) {
     "Листопад",
     "Грудень",
   ];
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+    onFilterChange({ category: e.target.value, month: selectedMonth });
+  };
+
+  const handleMonthChange = (e) => {
+    setSelectedMonth(e.target.value);
+    onFilterChange({ category: selectedCategory, month: e.target.value });
+  };
+
   return (
     <>
       <div className={style.container}>
         <div className={style.category}>
-          <select className={style.select}>
-            <option value="" disabled selected>
-              Категорії
-            </option>
+          <select
+            className={style.select}
+            value={selectedCategory}
+            onChange={handleCategoryChange}
+          >
+            <option value="">Категорії</option>
             {category.map((item, index) => (
               <option className={style.option} key={index} value={item}>
                 {item}
@@ -45,29 +58,23 @@ function MenuBar({ addTransaction }) {
           </select>
         </div>
         <div className={style.month}>
-          <select className={style.select}>
-            <option value="" disabled selected>
-              Місяць
-            </option>
+          <select
+            className={style.select}
+            value={selectedMonth}
+            onChange={handleMonthChange}
+          >
+            <option value="">Місяць</option>
             {monthNamesUA.map((item, index) => (
-              <option className={style.option} key={index} value={item}>
+              <option className={style.option} key={index} value={index}>
                 {item}
               </option>
             ))}
           </select>
         </div>
-        {/* <div className={style.sort}>
-          <img src={sort} alt="sort" />
-        </div> */}
         <div className={style.add}>
-          <img src={add} alt="add" onClick={() => setIsModalOpen(true)} />
+          <img src={add} alt="add" onClick={onOpenModal} />
         </div>
       </div>
-      <ModalCrete
-        isOpen={isModalOpen}
-        onCloseModal={() => setIsModalOpen(false)}
-        addTransaction={addTransaction}
-      />
     </>
   );
 }

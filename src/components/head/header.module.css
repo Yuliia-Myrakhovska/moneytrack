@@ -1,17 +1,20 @@
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 15px 0 15px;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px 15px 0 15px;
-  width: 100%;
+
   box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
+  /* position: fixed;
+  top: 0; */
   width: 100%;
+  max-width: 1200px;
   z-index: 3;
   background-color: #f9f9f9;
 }
@@ -29,12 +32,15 @@
   gap: 5px;
 }
 
-/* @media (min-width: 784px) {
-  .link:hover {
-    text-decoration: solid;
-    transition: 0.5s;
+@media (max-width: 784px) {
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px 15px;
+    width: calc(100% - 30px);
   }
-} */
+}
 
 .link,
 .logo {
